@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Classic cars</title>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="./imgs/apple-touch-icon.png" sizes="180x180" />
+    <link rel="icon" href="./imgs/favicon-32x32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="./imgs/favicon-16x16.png" sizes="16x16" type="image/png" />
+    <link rel="icon" href="./imgs/favicon.ico" />
+
+    <style>
+      .card {
+        width: 32.5%;
+        min-width: 355px;
+      }
+      .card img {
+        min-width: 410px;
+        transition: all 250ms ease-in-out;
+      }
+      .card img:hover {
+        min-width: 480px;
+      }
+      .card a:first-child {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 235px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <nav class="navbar navbar-expand-md" aria-label="Classic cars site">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html">
+            <img
+              src="./imgs/logo-180.png"
+              alt="classic cars"
+              width="40"
+              height="38"
+              class="img-fluid"
+            />
+            Classic Cars
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <div class="container">
+        <h1 class="text-center mt-4">Classic cars</h1>
+
+        <!-- LISTE DES VOITURES (JS) -->
+        <section
+          class="card-cont d-flex flex-wrap justify-content-center gap-3 mt-4"
+        >
+          <!-- contenu généré dynamiquement -->
+        </section>
+      </div>
+
+      <!-- BOUTON MODAL -->
+      <button
+        type="button"
+        class="btn btn-primary position-fixed bottom-0 end-0 m-4"
+        data-bs-toggle="modal"
+        data-bs-target="#addCarModal"
+      >
+        Add car
+      </button>
+
+      <!-- MODAL ADD CAR -->
+      <div
+        class="modal fade"
+        id="addCarModal"
+        tabindex="-1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Add a new car</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+
+            <div class="modal-body">
+              <form id="add-car-form" class="row g-3">
+
+                <div class="col-md-6">
+                  <label class="form-label">Brand</label>
+                  <input type="text" class="form-control" name="brand" required />
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Model</label>
+                  <input type="text" class="form-control" name="model" required />
+                </div>
+
+                <div class="col-md-4">
+                  <label class="form-label">Year</label>
+                  <input type="number" class="form-control" name="year" required />
+                </div>
+
+                <div class="col-md-4">
+                  <label class="form-label">Color</label>
+                  <input type="text" class="form-control" name="color" />
+                </div>
+
+                <div class="col-md-4">
+                  <label class="form-label">Mileage</label>
+                  <input type="number" class="form-control" name="mileage" />
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Price (€)</label>
+                  <input type="number" class="form-control" name="price" />
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Image URL</label>
+                  <input type="text" class="form-control" name="imageUrl" />
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label">Description</label>
+                  <textarea class="form-control" name="description"></textarea>
+                </div>
+
+                <div class="col-12 text-end">
+                  <button type="submit" class="btn btn-primary">
+                    Add car
+                  </button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="text-muted py-5">
+      <div class="container"></div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+    <!-- TON SCRIPT -->
+    <script type="module" src="./js/script.js"></script>
+  </body>
+</html>
