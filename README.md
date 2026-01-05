@@ -44,7 +44,7 @@ Ce projet a été réalisé dans le cadre du TP2 de développement web frontend,
 - **Authentification** : Utilisation d'une clé API via le header `x-api-key`
 - **Format de données** : JSON pour l'échange de données
 
-## ✨ Fonctionnalités implémentées
+##  Fonctionnalités implémentées
 
 ### 1. Affichage de la liste des voitures (READ)
 
@@ -129,7 +129,7 @@ Toutes les fonctions API implémentent une gestion d'erreurs cohérente :
 5. **Retour cohérent** : Toutes les fonctions retournent `null` ou un objet avec `success: false` en cas d'erreur
 6. **Feedback utilisateur** : Affichage de messages d'erreur clairs dans l'interface
 
-## 🎨 Expérience utilisateur
+##  Expérience utilisateur
 
 ### États de l'interface
 
@@ -191,7 +191,7 @@ Toutes les fonctions API implémentent une gestion d'erreurs cohérente :
 - **Accessibilité** : Utilisation de balises sémantiques HTML5 et attributs ARIA
 - **Performance** : Utilisation de fragments DOM et optimisation des requêtes
 
-## 🔮 Améliorations possibles
+##  Améliorations possibles
 
 - **Validation côté client plus poussée** : Utilisation d'une bibliothèque de validation (ex: Joi, Yup)
 - **Gestion d'état globale** : Implémentation d'un système de state management simple
